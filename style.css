@@ -8,9 +8,9 @@
     --btn-txt: #3d3d3d;
     --error-txt: #ff5454;
 
-    --size-heading: 5vmax;
+    --size-heading: 5rem;
     --size-footers: min(1rem, 1vmax);
-    --size-button: 1.4vmax;
+    --size-button: 1.4rem;
 
 }
 
@@ -20,6 +20,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    border: 1px red solid;
 }
 
 /*Elements*/
@@ -37,6 +38,17 @@ body {
 a {
     text-decoration: underline;
     color: var(--dark-txt);
+}
+
+svg {
+    height: 2rem;
+    width: 2rem;
+    aspect-ratio: 1/1;
+
+}
+
+svg path {
+    fill: coral;
 }
 
 /*Classes*/
