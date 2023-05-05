@@ -9,7 +9,7 @@
     --error-txt: #ff5454;
 
     --size-heading: 5rem;
-    --size-footers: min(1rem, 1vmax);
+    --size-footers: 1rem;
     --size-button: 1.4rem;
 }
 
@@ -43,7 +43,6 @@ svg {
     height: 2rem;
     width: 2rem;
     aspect-ratio: 1/1;
-
 }
 
 svg path {
