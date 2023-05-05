@@ -11,7 +11,6 @@
     --size-heading: 5rem;
     --size-footers: min(1rem, 1vmax);
     --size-button: 1.4rem;
-
 }
 
 *,
@@ -27,9 +26,9 @@
 
 body {
     min-height: 100vh;
+    height: auto;
     min-width: 100vw;
-    display: flex;
-    flex-flow: column nowrap;
+    width: auto;
     background: var(--background);
     color: var(--dark-txt);
     font-family: Lato, sans-serif;
