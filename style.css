@@ -9,8 +9,13 @@
     --error-txt: #ff5454;
 
     --size-heading: 5rem;
+    --size-sidebar-title: 1.75rem;
+    --size-sidebar-links: 1.25rem;
+    --size-sidebar-links-active: 1.5rem;
     --size-footers: 1rem;
     --size-button: 1.4rem;
+
+    --gap-sidebar: 1.5rem;
 }
 
 *,
@@ -19,7 +24,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 1px red solid;
+    border: 1px #ff5757 solid;
 }
 
 /*Elements*/
@@ -32,11 +37,21 @@ body {
     background: var(--background);
     color: var(--dark-txt);
     font-family: Lato, sans-serif;
+    display: grid;
+    grid-template: auto 1fr min-content / max(240px, 18vw) 1fr;
+    grid-template-areas:
+            'sidebar header'
+            'sidebar content'
+            'sidebar footer';
 }
 
 a {
-    text-decoration: underline;
-    color: var(--dark-txt);
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
 }
 
 svg {
@@ -46,16 +61,71 @@ svg {
 }
 
 svg path {
-    fill: coral;
+    fill: #ff7f29;
 }
 
 /*Classes*/
+.sidebar {
+    grid-area: sidebar;
+    padding: 1.5rem;
+}
+
+.sidebar .title {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sidebar);
+    padding: 0.5rem 0;
+}
+
+.sidebar .title .icon {
+    height: 4rem;
+    width: 4rem;
+}
+
+.sidebar .title h1 {
+    font-size: var(--size-sidebar-title);
+}
+
+.sidebar .nav-group {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap-sidebar);
+    margin-top: 3rem;
+    padding: 0.5rem 0;
+}
+
+.sidebar .nav-group .nav-item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: calc(var(--gap-sidebar) * 2);
+}
+
+.sidebar .nav-group .nav-item .icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.sidebar .nav-group .nav-item p {
+    font-size: var(--size-sidebar-links);
+}
+
+.sidebar .nav-group .nav-item p.active {
+    font-size: var(--size-sidebar-links-active);
+    font-weight: 700;
+}
 
 .footer {
+    grid-area: footer;
     display: flex;
     justify-content: center;
     padding: 10px;
     font-size: var(--size-footers);
 
     background-color: rgba(253, 154, 100, 0.6);
+}
+
+.footer a {
+    text-decoration: underline;
+    color: var(--dark-txt);
 }
