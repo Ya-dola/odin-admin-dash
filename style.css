@@ -22,6 +22,7 @@
     --size-button: 1.3rem;
 
     --gap-sidebar: 1.2rem;
+    --gap-trending: 1rem;
 
     --pic-default-wh: 4rem;
 
@@ -36,7 +37,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border: 1px #ff5757 solid;
+    /*border: 1px #ff5757 solid;*/
 }
 
 /*Elements*/
@@ -102,10 +103,21 @@ button.action {
     height: var(--pic-default-wh);
 }
 
+.name {
+    font-weight: 700;
+}
+
+.username {
+    font-style: italic;
+}
+
 .card {
     /*background-color: var(--gray-1);*/
-    padding: 1.4rem;
+    padding: 1.2rem;
     border-radius: 0.8rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.6rem;
     /*box-shadow: var(--shadow);*/
 }
 
@@ -114,7 +126,9 @@ button.action {
 }
 
 .card .body {
-    line-clamp: 6;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
@@ -250,7 +264,6 @@ button.action {
 
 .header .bottom .profile .wording .name {
     font-size: var(--size-header-name);
-    font-weight: 700;
 }
 
 .header .bottom .action-btns {
@@ -288,10 +301,7 @@ button.action {
 }
 
 .projects .card {
-    display: flex;
-    flex-flow: column nowrap;
     justify-content: space-between;
-    gap: 0.4rem;
     border-left: 10px #14b8a6 solid;
 }
 
@@ -307,8 +317,54 @@ button.action {
     grid-area: announcements;
 }
 
+.announcements .card .body {
+    -webkit-line-clamp: 4;
+}
+
+.announcements .announcement {
+    padding: 0.5rem 0;
+}
+
+.announcements .announcement:first-child {
+    padding-top: 0;
+}
+
+.announcements .announcement:last-child {
+    padding-bottom: 0;
+}
+
+.announcements .announcement + .announcement {
+    border-top: gray 1px solid;
+}
+
 .trending {
     grid-area: trending;
+}
+
+.trending .trending-user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: var(--gap-trending);
+    padding: 0.3rem 0;
+}
+
+.trending .trending-user:first-child {
+    padding-top: 0;
+}
+
+.trending .trending-user:last-child {
+    padding-bottom: 0;
+}
+
+.trending .trending-user .user {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.25rem;
+}
+
+.trending .trending-user .user .name {
+    font-weight: 300;
 }
 
 .footer {
