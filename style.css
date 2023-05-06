@@ -299,6 +299,7 @@ button.action {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-auto-rows: 260px;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 .projects .card {
