@@ -1,6 +1,7 @@
 :root {
     /*--background: #e3e7ec;*/
     --background: #d1d5db;
+    --background-header-card: #e5e7eb;
 
     --btn-orange: #ff9272;
 
@@ -41,12 +42,11 @@
 }
 
 /*Elements*/
-
 body {
     min-height: 100vh;
-    height: auto;
+    height: 100vh;
     min-width: 100vw;
-    width: auto;
+    width: 100vw;
     background: var(--background);
     color: var(--dark-txt);
     font-family: Lato, sans-serif;
@@ -112,7 +112,7 @@ button.action {
 }
 
 .card {
-    /*background-color: var(--gray-1);*/
+    background-color: var(--background-header-card);
     padding: 1.2rem;
     border-radius: 0.8rem;
     display: flex;
@@ -194,6 +194,7 @@ button.action {
 .header {
     grid-area: header;
     padding: 1.5rem 4rem;
+    background-color: var(--background-header-card);
 }
 
 .header .top {
@@ -347,6 +348,7 @@ button.action {
     align-items: center;
     gap: var(--gap-trending);
     padding: 0.3rem 0;
+    cursor: pointer;
 }
 
 .trending .trending-user:first-child {
