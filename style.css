@@ -14,6 +14,7 @@
     --white2: #e6e9ec;
     --gray1: #dddfe4;
     --gray2: #c7ccd2;
+    --gray3: #d4d6da;
     --dark1: #3d3d3d;
     --dark2: #2a2a2a;
 
@@ -29,7 +30,7 @@
 
     --clr-btn: var(--blue);
     --clr-svg: var(--dark1);
-    --clr-search-bar: var(--gray2);
+    --clr-search-bar: var(--gray3);
     --clr-search-outline: var(--blue);
     --clr-sidebar-svg: var(--white1);
     --clr-card-border: var(--orange4);
@@ -55,10 +56,15 @@
     --icon-big-wh: 3rem;
     --icon-huge-wh: 4rem;
 
-    --shadow-header: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    --shadow-header: 0 10px 14px -3px rgba(0, 0, 0, 0.125),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 4px 6px 2px rgba(0, 0, 0, 0.125),
+    0 4px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-sidebar: 6px 0 12px -2px rgba(0, 0, 0, 0.15),
+    4px 0 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-btn: 0 0 4px 4px rgba(0, 0, 0, 0.1),
+    0 4px 4px -2px rgba(0, 0, 0, 0.125);
+    --shadow-pic: 0 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 *,
@@ -122,6 +128,7 @@ button.action {
     font-weight: 700;
     padding: 0.75rem 2.3rem;
     border-radius: 99rem;
+    box-shadow: var(--shadow-btn);
 }
 
 /*Classes*/
@@ -130,6 +137,7 @@ button.action {
     background-color: var(--background-pic);
     aspect-ratio: 1 / 1;
     height: var(--pic-default-wh);
+    box-shadow: var(--shadow-pic);
 }
 
 .name {
@@ -166,6 +174,7 @@ button.action {
     padding: 1.5rem;
     background-color: var(--background-sidebar);
     color: var(--txt-light);
+    box-shadow: var(--shadow-sidebar);
 }
 
 .sidebar svg path {
