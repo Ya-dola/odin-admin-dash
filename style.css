@@ -35,6 +35,7 @@
     --clr-sidebar-svg: var(--white1);
     --clr-card-border: var(--orange4);
     --clr-anncmnt-sep: var(--red2);
+    --clr-trending-sep: var(--gray2);
     --clr-footer: var(--orange2);
 
     --size-heading: 5rem;
@@ -390,7 +391,7 @@ button.action {
     flex-flow: row nowrap;
     align-items: center;
     gap: var(--gap-trending);
-    padding: 0.3rem 0;
+    padding: 0.5rem 0;
     cursor: pointer;
 }
 
@@ -400,6 +401,10 @@ button.action {
 
 .trending .trending-user:last-child {
     padding-bottom: 0;
+}
+
+.trending .trending-user + .trending-user {
+    border-top: 1px var(--clr-trending-sep) solid;
 }
 
 .trending .trending-user .user {
