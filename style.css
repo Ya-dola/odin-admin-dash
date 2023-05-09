@@ -53,6 +53,11 @@
 
     --pic-default-wh: 4rem;
 
+    --profile: url(yadola.png);
+    --avatar1: url(avatar1.png);
+    --avatar2: url(avatar2.png);
+    --avatar3: url(avatar3.png);
+
     --icon-default-wh: 2.4rem;
     --icon-big-wh: 3rem;
     --icon-huge-wh: 4rem;
@@ -135,6 +140,7 @@ button.action {
 /*Classes*/
 .pic {
     border-radius: 50%;
+    background: var(--profile) center center / cover no-repeat;
     background-color: var(--background-pic);
     aspect-ratio: 1 / 1;
     height: var(--pic-default-wh);
@@ -405,6 +411,18 @@ button.action {
 
 .trending .trending-user + .trending-user {
     border-top: 1px var(--clr-trending-sep) solid;
+}
+
+.trending .trending-user.trend1 .pic {
+    background: var(--avatar1) center center / cover no-repeat;
+}
+
+.trending .trending-user.trend2 .pic {
+    background: var(--avatar2) center center / cover no-repeat;
+}
+
+.trending .trending-user.trend3 .pic {
+    background: var(--avatar3) center center / cover no-repeat;
 }
 
 .trending .trending-user .user {
