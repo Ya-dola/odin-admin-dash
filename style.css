@@ -48,6 +48,8 @@
     --size-footers: 1rem;
     --size-button: 1.3rem;
 
+    --weight-light: 300;
+
     --gap-sidebar: 1.2rem;
     --gap-trending: 1rem;
 
@@ -174,6 +176,7 @@ button.action {
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-weight: var(--weight-light);
 }
 
 .sidebar {
@@ -304,6 +307,10 @@ button.action {
     height: calc(var(--pic-default-wh) * 1.5);
 }
 
+.header .bottom .profile .greeting {
+    font-weight: var(--weight-light);
+}
+
 .header .bottom .profile .wording {
     display: flex;
     flex-flow: column nowrap;
@@ -432,7 +439,7 @@ button.action {
 }
 
 .trending .trending-user .user .name {
-    font-weight: 300;
+    font-weight: var(--weight-light);
 }
 
 .footer {
