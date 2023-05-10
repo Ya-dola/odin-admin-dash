@@ -87,9 +87,9 @@
 /*Elements*/
 body {
     min-height: 100vh;
-    height: 100vh;
+    height: 100vh; /*Forces scrolling on Overflowing Areas*/
     min-width: 100vw;
-    width: 100vw;
+    width: 100vw; /*Forces scrolling on Overflowing Areas*/
     background: var(--background);
     color: var(--txt-dark);
     font-family: Lato, sans-serif;
